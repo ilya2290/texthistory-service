@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+
+  mongodb-history:
+    image: mongo:6.0
+    container_name: mongodb-history
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_history_data:/data/db
+
+volumes:
+  mongo_history_data:
