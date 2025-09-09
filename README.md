@@ -69,3 +69,11 @@ volumes:
 - ```docker-compose -p texthistory_service up -d```
 - ```mvn clean install```
 - ```mvn spring-boot:run```
+---
+## Connect to the MongoDB
+Useful commands to test results directly in Mongo.
+
+- ```show dbs```
+- ```paragraph_result_db> show collections```
+- ```paragraph_result_db> db.paragraph_results.find().pretty()```
+- ```paragraph_result_db> db.paragraph_results.find().sort({ processedAt: -1 }).limit(10)```
